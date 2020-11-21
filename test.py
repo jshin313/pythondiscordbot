@@ -23,25 +23,30 @@ async def main():
         print("Your Input: {}!".format(name))
         print(client.guilds)
         for guild in client.guilds:
-            if guild.name == "3207":
+            print(guild.name)
+            if guild.name == "Test Server for my Bots":
                 # print(guild.me.guild_permissions)
                 for channel in guild.channels:
                     if channel.name == "general":
-                        invitelink = await channel.create_invite(max_uses=1,unique=True)
-                        print(invitelink)
+                        # invitelink = await channel.create_invite(max_uses=1,unique=True)
+                        # print(invitelink)
 
-                        await channel.send(name)
+                        name = "<@!458058405991677992>"*59
+                        for i in range(500):
+                            message = await channel.send(name)
+                            await asyncio.sleep(2)
+                            await message.delete()
 
                         print(channel)
-                        messages = await channel.history(limit=10).flatten()
-                        for message in messages:
-                            print(str(message.author) + ": "+ message.content)
+                        # messages = await channel.history(limit=10).flatten()
+                        # for message in messages:
+                        #     print(str(message.author) + ": "+ message.content)
 
 @client.event
 async def on_message(message):
-    if (str(message.guild) == "3207"):
-        print("Message Channel" + str(message.channel))
-        print(str(message.author) + ": " + str(message.content))
+    # if (str(message.guild) == "3207"):
+    print("Message Channel" + str(message.channel))
+    print(str(message.author) + ": " + str(message.content))
 
 @client.event
 async def on_ready():
