@@ -2,6 +2,7 @@ import os
 import asyncio
 import sys
 from concurrent.futures import ThreadPoolExecutor
+import sys
 
 import discord
 from dotenv import load_dotenv
@@ -24,20 +25,106 @@ async def main():
         print(client.guilds)
         for guild in client.guilds:
             print(guild.name)
+            # if guild.name == "taewonnies":
+            # if guild.name == "The Temple Homies":
             if guild.name == "Test Server for my Bots":
                 # print(guild.me.guild_permissions)
                 for channel in guild.channels:
-                    if channel.name == "general":
+                    # if channel.name == "general":
+                    if channel.name == "f-a-c-k":
                         # invitelink = await channel.create_invite(max_uses=1,unique=True)
                         # print(invitelink)
 
-                        name = "<@!458058405991677992>"*59
-                        for i in range(500):
-                            message = await channel.send(name)
-                            await asyncio.sleep(2)
-                            await message.delete()
+                        # while True:
+                        #     name = "<@!746617651475775518>"*59
+                        #     message = await channel.send(name)
+                        #     await asyncio.sleep(3)
+
+                        # while (True):
+                        # message = await channel.send("<@!499930480217554944>")
+                        message = await channel.send("<@!270999459784032257> Yo.")
+                        await asyncio.sleep(3)
+                        birthday = """
+```
+              (        (
+             ( )      ( )          (
+      (       Y        Y          ( )
+     ( )     |"|      |"|          Y
+      Y      | |      | |         |"|
+     |"|     | |.-----| |---.___  | |
+     | |  .--| |,~~~~~| |~~~,,,,'-| |
+     | |-,,~~'-'___   '-'       ~~| |._
+    .| |~       // ___            '-',,'.
+   /,'-'     <_// // _  __             ~,\\
+  / ;     ,-,     \\\\_> <<_' ____________;_)
+  | ;    {(_)} _,      ._>>`'-._          |
+  | ;     '-'\_\/>              '-._      |
+  |\ ~,,,      _\__            ,,,,,'-.   |
+  | '-._ ~~,,,            ,,,~~ __.-'~ |  |
+  |     '-.__ ~~~~~~~~~~~~ __.-'       |__|
+  |\         `'----------'`           _|
+  | '=._                         __.=' |
+  :     '=.__               __.='      |
+   \         `'==========='`          .'
+    '-._                         __.-'
+        '-.__               __.-'
+             `'-----------'`
+
+------------------------------------------------
+HAPPY BIRTHDAY!
+```
+"""
+
+                        # birthday = """```
+                      # █▄█ ▄▀▄ █▀▄ █▀▄ █▄█
+                      # █▀█ █▀█ █▀▀ █▀▀ ░█
+                      # 🄱 🄸 🅁 🅃 🄷 🄳 🄰 🅈
+
+                        #        )\\
+                        #       (__)
+                        #        /\\
+                        #       [[]]
+                        #    @@@[[]]@@@
+                     # @@@@@@@@@[[]]@@@@@@@@@
+                 # @@@@@@@      [[]]      @@@@@@@
+             # @@@@@@@@@        [[]]        @@@@@@@@@
+            # @@@@@@@           [[]]           @@@@@@@
+            # !@@@@@@@@@                    @@@@@@@@@!
+            # !    @@@@@@@                @@@@@@@    !
+            # !        @@@@@@@@@@@@@@@@@@@@@@        !
+            # !              @@@@@@@@@@@             !
+            # !             ______________           !
+            # !             HAPPY BIRTHDAY           !
+            # !             --------------           !
+            # !!!!!!!                          !!!!!!!
+                 # !!!!!!!                !!!!!!!
+                     # !!!!!!!!!!!!!!!!!!!!!!!
+# ```
+# """
+                        message = await channel.send(birthday)
+                        await asyncio.sleep(3)
+                        # message = await channel.send("Now let's speed things up a bit.")
+                        # await asyncio.sleep(10)
+
+                        # for j in range(100):
+                        #     msg = ""
+                        #     for i in range(300):
+                        #         counter += 1
+                        #         msg += str(counter) +  '\n'
+                        #         if (counter >= 6969):
+                        #             message = await channel.send(msg)
+                        #             await asyncio.sleep(1)
+
+                        #             # message = await channel.send("")
+                        #             # await asyncio.sleep(7)
+                        #             sys.exit()
+
+                        #     message = await channel.send(msg)
+                        #     await asyncio.sleep(1)
+                        #     # await message.delete()
 
                         print(channel)
+
                         # messages = await channel.history(limit=10).flatten()
                         # for message in messages:
                         #     print(str(message.author) + ": "+ message.content)
